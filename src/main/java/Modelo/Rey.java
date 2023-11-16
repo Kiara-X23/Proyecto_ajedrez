@@ -1,13 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Modelo;
 
-/**
- *
- * @author Kiara
- */
-public class Rey {
+
+public class Rey extends Pieza {
     
+private boolean estadoJaque;
+
+    public Rey(String tipo, String color, int posX, int posY) {
+        super(tipo, color, posX, posY);
+    }
+    
+    
+public void Mover() {
+        
+    }
+    
+public void validarMovimiento (){
+      
+        
+    }  
+  
+public boolean isCaptura() {
+        
+        return false;
+        
+    } 
 }
