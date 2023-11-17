@@ -9,7 +9,15 @@ public class Controlador {
         this.jugador1 = jugador1;
         this.jugador2 = jugador2;
     }
-    
+
+    public void setJugador1(String jugador1) {
+        this.jugador1 = jugador1;
+    }
+
+    public void setJugador2(String jugador2) {
+        this.jugador2 = jugador2;
+    }
+
     public void Empezar() {
         
     }
@@ -30,4 +38,8 @@ public class Controlador {
     public void ganador() {
         
     }
+    public void mostrarJugador1() {
+        
+    }
+    
 }
