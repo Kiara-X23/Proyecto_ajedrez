@@ -28,8 +28,7 @@ public class Alfil extends Pieza {
 
     @Override
     public boolean isCaptura(int posX, int posY) {
-        // Implementación para verificar si la torre puede capturar en la posición (posX, posY)
-        return (validarMovimiento(posX, posY) && (getColor() != obtenerColorEnPosicion(posX, posY)));
+        return validarMovimiento(posX, posY) && (getColor() != obtenerColorEnPosicion(posX, posY));
     }
 
     private Color obtenerColorEnPosicion(int x, int y) {
