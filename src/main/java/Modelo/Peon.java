@@ -45,14 +45,18 @@ public class Peon extends Pieza {
 
     @Override
     public boolean isCaptura(int posX, int posY) {
-        // Implementación para verificar si el peón puede capturar en la posición (posX, posY)
         int diffX = Math.abs(posX - getX());
-        int diffY = Math.abs(posY - getY());
-
-        if (getColor() == Color.BLANCO) {
-            return (diffX == 1 && diffY == 1 && posY - getY() == 1);
-        } else { // Para el peón negro
-            return (diffX == 1 && diffY == -1 && posY - getY() == -1);
+        int diffY = posY - getY();
+    
+        Pieza piezaEnPosicion = obtenerPiezaEnPosicion(posX, posY); // Método para obtener la pieza en la posición indicada
+    
+        if (piezaEnPosicion != null) {
+            if (getColor() == Color.BLANCO) {
+                return (diffX == 1 && diffY == 1 && piezaEnPosicion.getColor() == Color.NEGRO);
+            } else {
+                return (diffX == 1 && diffY == -1 && piezaEnPosicion.getColor() == Color.BLANCO);
+            }
         }
+        return false;
     }
 }
