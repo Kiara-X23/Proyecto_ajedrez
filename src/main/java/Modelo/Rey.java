@@ -28,10 +28,9 @@ public class Rey extends Pieza {
 
     @Override
     public boolean isCaptura(int posX, int posY) {
-        // Implementación para verificar si el rey puede capturar en la posición (posX, posY)
         return validarMovimiento(posX, posY) && (getColor() != obtenerColorEnPosicion(posX, posY));
     }
-
+    
     private Color obtenerColorEnPosicion(int x, int y) {
         // Método para obtener el color de la pieza en la posición (x, y)
         // Implementación similar a la utilizada en las clases anteriores
