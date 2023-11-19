@@ -30,7 +30,6 @@ public class Caballo extends Pieza {
 
     @Override
     public boolean isCaptura(int posX, int posY) {
-        // Implementación para verificar si el caballo puede capturar en la posición (posX, posY)
         return validarMovimiento(posX, posY) && (getColor() != obtenerColorEnPosicion(posX, posY));
     }
 
