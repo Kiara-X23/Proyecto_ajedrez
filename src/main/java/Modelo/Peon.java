@@ -5,7 +5,7 @@ public class Peon extends Pieza {
     private boolean primerMovimiento;
 
     public Peon(Color color, int x, int y) {
-        super(TipoPieza.PEON, color, x, y);
+        super(Ttipo.PEON, color, x, y);
         this.primerMovimiento = true;
     }
 
@@ -27,7 +27,7 @@ public class Peon extends Pieza {
         int diffX = Math.abs(x - getX());
         int diffY = Math.abs(y - getY());
 
-        if (getColor() == Color.BLANCO) {
+        if (getColor() == TColor.BLANCO) {
             if (diffX == 0 && diffY == 1) {
                 return true;
             } else if (primerMovimiento && diffX == 0 && diffY == 2) {
@@ -51,10 +51,10 @@ public class Peon extends Pieza {
         Pieza piezaEnPosicion = obtenerPiezaEnPosicion(posX, posY); // Método para obtener la pieza en la posición indicada
     
         if (piezaEnPosicion != null) {
-            if (getColor() == Color.BLANCO) {
-                return (diffX == 1 && diffY == 1 && piezaEnPosicion.getColor() == Color.NEGRO);
+            if (getColor() == TColor.BLANCO) {
+                return (diffX == 1 && diffY == 1 && piezaEnPosicion.getColor() == TColor.NEGRO);
             } else {
-                return (diffX == 1 && diffY == -1 && piezaEnPosicion.getColor() == Color.BLANCO);
+                return (diffX == 1 && diffY == -1 && piezaEnPosicion.getColor() == TColor.BLANCO);
             }
         }
         return false;
