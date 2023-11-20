@@ -37,11 +37,11 @@ public abstract class Pieza {
     }
 
     // Otros getters para obtener información sobre la pieza
-    public TipoPieza getTipo() {
+    public Ttipo getTipo() {
         return tipo;
     }
 
-    public Color getColor() {
+    public TColor getColor() {
         return color;
     }
 }
