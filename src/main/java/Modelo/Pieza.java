@@ -1,12 +1,12 @@
 package Modelo;
 
 public abstract class Pieza {
-    private TipoPieza tipo;
-    private Color color;
+    private Ttipo tipo;
+    private TColor color;
     private int x;
     private int y;
 
-    public Pieza(TipoPieza tipo, Color color, int x, int y) {
+    public Pieza(Ttipo tipo, TColor color, int x, int y) {
         this.tipo = tipo;
         this.color = color;
         this.x = x;
